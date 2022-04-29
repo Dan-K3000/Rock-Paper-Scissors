@@ -2,6 +2,10 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
+function makeTitleCase(word){
+  return(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+}
+
 function computerPlay(){
   switch(getRndInteger(1, 4)) {
     case 1: return("Rock");
@@ -23,12 +27,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(pScore, cScore){
-  const choice = prompt("Rock, Paper, or Scissors?");
-  const player = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+  const rawAnswer = prompt("Rock, Paper, or Scissors?");
+  const player = makeTitleCase(rawAnswer);
   const computer = computerPlay();
-  const results = playRound(player, computer)
+  const result = playRound(player, computer)
+  const targetScore = 3;
 
-  switch(results.charAt(4)){
+  switch(result.charAt(4)){
     case("W"):
       pScore++;
       break;
@@ -37,12 +42,13 @@ function game(pScore, cScore){
       break;
     }
 
-  if (pScore + cScore == 5) {
+  if (pScore == targetScore || cScore == targetScore) {
     if (pScore > cScore) {winner = "Player"}
     else {winner = "Computer"}
+    console.log(result)
     console.log(`Game Over! ${winner} wins! Final score=> Computer:${cScore} | Player:${pScore}`)}
   else {
-    console.log(`${results}  Score=> Computer:${cScore} | Player:${pScore}`)
+    console.log(`${result}  Score=> Computer:${cScore} | Player:${pScore}`)
     game(pScore, cScore)}
 }
 
