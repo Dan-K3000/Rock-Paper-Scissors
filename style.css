@@ -1,0 +1,126 @@
+body{
+  background-image: url(images/background.jpg);
+  background-size: 100% 100%;
+  margin: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer{
+  display: flex;
+  color: antiquewhite;
+  background-color: black;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.scoreContainer {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: black;
+  box-shadow: 0px 2px 6px 2px black;
+  height: 200px;
+  gap: 200px;
+  opacity: 87%;
+}
+
+.scoreBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 5px 15px;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 150px;
+  color: whitesmoke;
+  text-shadow: 0px 0px 6px black;
+}
+
+.score{
+  font-size: 70px;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  margin: 100px 50px;
+  gap: 50px;
+}
+
+.btn{
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  font-size: 25px;
+  font-weight: 500;
+  color: whitesmoke;
+  text-shadow:  1px 1px 4px black;
+  background-size: cover;
+  box-shadow: inset 0px 0px 15px 5px black, 1px 2px 5px 1px black;
+  cursor: pointer;
+}
+
+.throw{
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+img{
+  height: 150px;
+  width: 150px;
+}
+
+#rock{
+  background-image: url(images/rock.jpg);
+}
+
+#paper{
+  background-image: url(images/paper.jpg);
+}
+
+#scissors{
+  background-image: url(images/scissors.jpg);
+}
+
+.player{
+  background: red;
+  box-shadow: 0px 0px 10px 5px red, inset 0px 0px 7px 5px darkred;
+}
+
+.computer{
+  background: blue;
+  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 7px 5px darkblue;
+}
+
+.textBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBox .text{
+  opacity: 75%;
+  background: lightgoldenrodyellow;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  border-radius: 20px;
+  height: 200px;
+  width: 800px;
+  box-shadow: inset 0px 0px 2px 5px black;
+  text-shadow: 1px 1px 5px black;
+}
