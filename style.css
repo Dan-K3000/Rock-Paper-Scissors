@@ -1,21 +1,22 @@
 body{
-  background-image: url(images/background.jpg);
+  background: #96acb7;
   background-size: 100% 100%;
   margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   user-select: none;
+  color: #d4e4bc;
 }
 
 .footer{
   display: flex;
-  color: antiquewhite;
-  background-color: black;
-  padding: 15px;
+  background: #1e2019;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: fixed;
   bottom: 0;
+  font-size: 13px;
 }
 
 .scoreContainer {
@@ -24,11 +25,10 @@ body{
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: black;
-  box-shadow: 0px 2px 6px 2px black;
+  background: #1e2019;
+  box-shadow: 0px 2px 6px 2px #1e2019;
   height: 200px;
   gap: 200px;
-  opacity: 87%;
 }
 
 .scoreBox {
@@ -40,7 +40,6 @@ body{
   flex-wrap: wrap;
   width: 150px;
   height: 150px;
-  color: whitesmoke;
   text-shadow: 0px 0px 6px black;
 }
 
@@ -60,16 +59,14 @@ body{
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  border: solid 1px black;
   border-radius: 50%;
   width: 200px;
   height: 200px;
   font-size: 25px;
   font-weight: 500;
-  color: whitesmoke;
-  text-shadow:  1px 1px 4px black;
+  text-shadow:  1px 1px 3px black;
   background-size: cover;
-  box-shadow: inset 0px 0px 15px 5px black, 1px 2px 5px 1px black;
+  box-shadow: inset 0px 0px 12px 2px black, 2px 2px 10px 1px black;
   cursor: pointer;
 }
 
@@ -91,13 +88,13 @@ img{
 }
 
 .player{
-  background: red;
-  box-shadow: 0px 0px 10px 5px red, inset 0px 0px 7px 5px darkred;
+  background: #cc3363;
+  box-shadow: 0px 0px 10px 5px #cc3363, inset 0px 0px 7px 5px #aa3363;
 }
 
 .computer{
-  background: blue;
-  box-shadow: 0px 0px 10px 5px blue, inset 0px 0px 7px 5px darkblue;
+  background: #20063b;
+  box-shadow: 0px 0px 10px 5px #20063b, inset 0px 0px 7px 5px #20063f;
 }
 
 .textBox{
@@ -107,16 +104,16 @@ img{
 }
 
 .textBox .text{
-  opacity: 75%;
-  background: lightgoldenrodyellow;
+  background: #b5c8ba;
+  color: #1e2019;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 45px;
   border-radius: 20px;
   height: 200px;
   width: 800px;
-  box-shadow: inset 0px 0px 2px 5px black;
+  box-shadow: inset -1px 1px 1px 1px black;
   text-shadow: 1px 1px 5px black;
 }
