@@ -19,14 +19,14 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection == "rock" && computerSelection == "scissors" ||
     playerSelection == "paper" && computerSelection == "rock" ||
     playerSelection == "scissors" && computerSelection == "paper")
-    return(`You Win, ${playerSelection} beats ${computerSelection}`)
+    return(`You win ${playerSelection} beats ${computerSelection}!`)
   else if (playerSelection == computerSelection)
-    return(`Tie! You both choose ${computerSelection}`)
+    return(`Tie you both choose ${computerSelection}!`)
 
   else if (playerSelection == "")
     return
   else
-    return(`You Lose, ${computerSelection} beats ${playerSelection}`)
+    return(`You lose ${computerSelection} beats ${playerSelection}!`)
 }
 
 let pScore = 0;
@@ -45,27 +45,26 @@ function play(e) {
   const output = document.querySelector('.text');
 
   if(win == false){
+
     switch(result.charAt(4)){
-      case("W"):
+      case("w"):
         pScore++
         playerScore.textContent = pScore;
         break;
-      case("L"):
+      case("l"):
         cScore++;
         computerScore.textContent = cScore;
-      }
+    }
+
+    output.textContent = result
 
     if (pScore == targetScore || cScore == targetScore) {
       if (pScore > cScore) {winner = "Player"}
       else {winner = "Computer"}
-      output.textContent = `${result} Game Over! ${winner} wins!`
+      output.textContent = `Game Over! ${winner} wins!`
       win = true;
     }
-    else {
-      output.textContent = result
-      console.log(result);
-    }
-  return}
+  }
 };
 
 divs.forEach(div => div.addEventListener('click', play));
